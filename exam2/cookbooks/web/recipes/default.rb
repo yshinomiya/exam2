@@ -15,10 +15,7 @@ package "php5" do
 	action :install
 end
 
-cookbook_file "/var/www/test.php" do
-	action	:create
-	owner	"www-data"
-	group	"mode-www"
-	data 0644
+cookbook_file "/etc/apt/sources.list" do
+	source "sources.list"
 end
 
